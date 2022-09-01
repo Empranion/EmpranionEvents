@@ -1,0 +1,3 @@
+displayName = Empranion Battle Royale
+author = naka
+version = 0.1
