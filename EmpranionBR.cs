@@ -4,5 +4,5 @@ namespace EmpranionBR;
 
 public sealed class EmpranionBR : Mod
 {
-    public static EmpranionBR Instance { get; } = ModContent.GetInstance<EmpranionBR>();
+    public static EmpranionBR Instance => ModContent.GetInstance<EmpranionBR>();
 }
