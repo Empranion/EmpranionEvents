@@ -1,3 +1,5 @@
 displayName = Empranion Battle Royale
 author = naka
 version = 0.1
+includeSource = true
+homepage = https://github.com/naakaamura/EmpranionBR

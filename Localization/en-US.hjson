@@ -1,0 +1,8 @@
+﻿Mods: {
+    EmpranionBR: {
+        Commands: {
+            PermissionErrorMessage: "Insufficient permissions to execute this command."
+            ExecutionErrorMessage: "Something went wrong while trying to execute this command."
+        }
+    }
+}
