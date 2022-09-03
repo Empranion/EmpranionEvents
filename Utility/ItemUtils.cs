@@ -5,9 +5,9 @@ namespace EmpranionBR.Utility;
 
 public static class ItemUtils
 {
-    public static void CleanItemArray(Item[] array) {
-        for (int i = 0; i < array.Length; i++) {
-            Item item = array[i];
+    public static void CleanItemInventory(Item[] inventory) {
+        for (int i = 0; i < inventory.Length; i++) {
+            Item item = inventory[i];
 
             if (item == null || item.type == ItemID.None) {
                 continue;
