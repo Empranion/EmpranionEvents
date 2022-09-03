@@ -1,6 +1,15 @@
 ﻿Mods: {
     EmpranionBR: {
         Commands: {
+            # Start Game
+            StartGameErrorMessage: "There is already an active game going on at the moment."
+            StartGameSuccessMessage: "Starting a new game..."
+            
+            # End Game
+            EndGameErrorMessage: "There is no active game going on at the moment to be ended."
+            EndGameSuccessMessage: "Ending the current game..."
+            
+            # Exceptions
             PermissionErrorMessage: "Insufficient permissions to execute this command."
             ExecutionErrorMessage: "Something went wrong while trying to execute this command."
         }

@@ -1,8 +1,0 @@
-﻿Mods: {
-    EmpranionBR: {
-        Commands: {
-            PermissionErrorMessage: "Permissões insuficientes para executar este comando."
-            ExecutionErrorMessage: "Um erro foi detectado durante a execução deste comando."
-        }
-    }
-}
