@@ -2,9 +2,13 @@
 
 namespace EmpranionBR.Common.Commands;
 
-public sealed class StartCommand : AdminCommand
+public sealed class StartGameCommand : AdminCommand
 {
     public override string Command { get; } = "startgame";
+
+    public override string Usage { get; } = "/startgame";
+    
+    public override string Description { get; } = "Attempts to start a game";
 
     public override void SafeAction(CommandCaller caller, string input, string[] args) { }
 }
