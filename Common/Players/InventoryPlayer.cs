@@ -16,7 +16,7 @@ public sealed class GamemodePlayer : ModPlayer
     public Item[] OldBank2 { get; private set; }
     public Item[] OldBank3 { get; private set; }
     public Item[] OldBank4 { get; private set; }
-    
+
     public void CleanItems() {
         OldDye = Player.dye;
         OldMiscDyes = Player.miscDyes;
