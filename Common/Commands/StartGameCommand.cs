@@ -14,7 +14,7 @@ public sealed class StartGameCommand : AdminCommand
     public override string Description { get; } = "Attempts to start a game";
 
     public override void SafeAction(CommandCaller caller, string input, string[] args) {
-        if (GamemodeSystem.GameActive) {
+        if (GamemodeSystem.IsGameActive) {
             caller.Reply(Language.GetTextValue("Mods.EmpranionBR.Commands.StartGameErrorMessage"), ColorId.ErrorColor);
             return;
         }

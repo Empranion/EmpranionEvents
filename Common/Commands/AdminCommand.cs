@@ -1,7 +1,7 @@
-﻿using EmpranionBR.Common.Id;
+﻿using System.Linq;
+using EmpranionBR.Common.Id;
 using Steamworks;
 using Terraria.Localization;
-using System.Linq;
 using Terraria.ModLoader;
 
 namespace EmpranionBR.Common.Commands;
@@ -12,14 +12,14 @@ public abstract class AdminCommand : ModCommand
 
     public override sealed void Action(CommandCaller caller, string input, string[] args) {
         try {
-            if (!AdminId.AllIds.Contains(SteamUser.GetSteamID().m_SteamID)) {
+            if (!UserId.AdminIds.Contains(SteamUser.GetSteamID().m_SteamID)) {
                 caller.Reply(Language.GetTextValue("Mods.EmpranionBR.Commands.PermissionErrorMessage"), ColorId.ErrorColor);
                 return;
             }
 
             SafeAction(caller, input, args);
         }
-        catch (UsageException exception) {
+        catch (UsageException) {
             caller.Reply(Language.GetTextValue("Mods.EmpranionBR.Commands.ExecutionErrorMessage"), ColorId.ErrorColor);
         }
     }
