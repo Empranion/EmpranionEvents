@@ -1,6 +1,6 @@
 ﻿using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace EmpranionBR.Common.Globals;
 
@@ -12,12 +12,12 @@ public sealed class EmpranionGlobalItem : GlobalItem
                 item.damage = 23;
                 item.useTime = 20;
                 item.useAnimation = 20;
-                item.knockBack = 7;
+                item.knockBack = 7f;
                 break;
 
             case ItemID.BladeofGrass:
                 item.damage = 27;
-                item.knockBack = 2;
+                item.knockBack = 2f;
                 break;
 
             case ItemID.Starfury:
@@ -32,49 +32,7 @@ public sealed class EmpranionGlobalItem : GlobalItem
 
             case ItemID.Rally:
                 item.damage = 17;
-                item.knockBack = 2;
-                break;
-
-            case ItemID.BluePhaseblade:
-                item.damage = 34;
-                item.useTime = 24;
-                item.useAnimation = 24;
-                break;
-
-            case ItemID.GreenPhaseblade:
-                item.damage = 34;
-                item.useTime = 24;
-                item.useAnimation = 24;
-                break;
-
-            case ItemID.OrangePhaseblade:
-                item.damage = 34;
-                item.useTime = 24;
-                item.useAnimation = 24;
-                break;
-
-            case ItemID.PurplePhaseblade:
-                item.damage = 34;
-                item.useTime = 24;
-                item.useAnimation = 24;
-                break;
-
-            case ItemID.RedPhaseblade:
-                item.damage = 34;
-                item.useTime = 24;
-                item.useAnimation = 24;
-                break;
-
-            case ItemID.WhitePhaseblade:
-                item.damage = 34;
-                item.useTime = 24;
-                item.useAnimation = 24;
-                break;
-
-            case ItemID.YellowPhaseblade:
-                item.damage = 34;
-                item.useTime = 24;
-                item.useAnimation = 24;
+                item.knockBack = 2f;
                 break;
 
             case ItemID.AntlionClaw:
@@ -112,8 +70,7 @@ public sealed class EmpranionGlobalItem : GlobalItem
                 item.useTime = 16;
                 item.useAnimation = 16;
                 item.knockBack = 6.5f;
-                item.velocity *= 11;
-                item.shootSpeed = 11;
+                item.shootSpeed = 11f;
                 break;
 
             case ItemID.Harpoon:
@@ -158,7 +115,18 @@ public sealed class EmpranionGlobalItem : GlobalItem
                 item.damage = 16;
                 item.useTime = 16;
                 item.useAnimation = 16;
-                item.velocity *= 16;
+                break;
+
+            case ItemID.WhitePhaseblade:
+            case ItemID.RedPhaseblade:
+            case ItemID.OrangePhaseblade:
+            case ItemID.YellowPhaseblade:
+            case ItemID.GreenPhaseblade:
+            case ItemID.BluePhaseblade:
+            case ItemID.PurplePhaseblade:
+                item.damage = 34;
+                item.useTime = 24;
+                item.useAnimation = 24;
                 break;
         }
     }
