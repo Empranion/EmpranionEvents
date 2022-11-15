@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpranionBR", "EmpranionBR.csproj", "{F8859141-4AA3-4CFB-9167-A0EAC12AB06C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpranionTHC", "EmpranionEvents.csproj", "{F8859141-4AA3-4CFB-9167-A0EAC12AB06C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

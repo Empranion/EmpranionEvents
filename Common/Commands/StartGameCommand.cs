@@ -1,26 +1,20 @@
-﻿using EmpranionBR.Common.Id;
-using EmpranionBR.Common.Systems;
-using Terraria.Localization;
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
 
-namespace EmpranionBR.Common.Commands;
+namespace EmpranionEvents.Common.Commands;
 
 public sealed class StartGameCommand : AdminCommand
 {
-    public override string Command { get; } = "startgame";
+    public override string Command => "startgame";
 
-    public override string Usage { get; } = "/startgame";
+    public override string Usage => "/startgame";
 
-    public override string Description { get; } = "Attempts to start a game";
+    public override string Description => "Attempts to start a game";
 
-    public override void SafeAction(CommandCaller caller, string input, string[] args) {
-        if (GamemodeSystem.IsGameActive) {
-            caller.Reply(Language.GetTextValue("Mods.EmpranionBR.Commands.StartGameErrorMessage"), ColorId.ErrorColor);
+    protected override void SafeAction(CommandCaller caller, string input, string[] args) {
+        if (EmpranionSystem.IsGameActive) {
             return;
         }
 
-        GamemodeSystem.StartGame();
-
-        caller.Reply(Language.GetTextValue("Mods.EmpranionBR.Commands.StartGameSuccessMessage"), ColorId.SuccessColor);
+        EmpranionSystem.StartGame();
     }
 }

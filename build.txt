@@ -1,4 +1,4 @@
-displayName = Empranion Battle Royale
+displayName = Empranion Events
 author = naka
 version = 0.1
 includeSource = true

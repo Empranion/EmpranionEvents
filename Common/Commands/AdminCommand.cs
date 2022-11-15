@@ -1,28 +1,21 @@
 ﻿using System.Linq;
-using EmpranionBR.Common.Id;
+using EmpranionEvents.Common.ID;
 using Steamworks;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace EmpranionBR.Common.Commands;
+namespace EmpranionEvents.Common.Commands;
 
 public abstract class AdminCommand : ModCommand
 {
-    public override sealed CommandType Type { get; } = CommandType.Chat;
+    public override sealed CommandType Type => CommandType.Chat;
 
     public override sealed void Action(CommandCaller caller, string input, string[] args) {
-        try {
-            if (!UserId.AdminIds.Contains(SteamUser.GetSteamID().m_SteamID)) {
-                caller.Reply(Language.GetTextValue("Mods.EmpranionBR.Commands.PermissionErrorMessage"), ColorId.ErrorColor);
-                return;
-            }
+        if (!UserId.AdminIds.Contains(UserId.CurrentId)) {
+            return;
+        }
 
-            SafeAction(caller, input, args);
-        }
-        catch (UsageException) {
-            caller.Reply(Language.GetTextValue("Mods.EmpranionBR.Commands.ExecutionErrorMessage"), ColorId.ErrorColor);
-        }
+        SafeAction(caller, input, args);
     }
 
-    public abstract void SafeAction(CommandCaller caller, string input, string[] args);
+    protected abstract void SafeAction(CommandCaller caller, string input, string[] args);
 }
