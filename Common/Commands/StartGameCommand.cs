@@ -12,10 +12,10 @@ public sealed class StartGameCommand : AdminCommand
     public override string Description => "Attempts to start a game";
 
     protected override void SafeAction(CommandCaller caller, string input, string[] args) {
-        if (EmpranionSystem.IsGameActive) {
+        if (EmpranionGameSystem.IsGameActive) {
             return;
         }
 
-        EmpranionSystem.StartGame();
+        EmpranionGameSystem.StartGame();
     }
 }

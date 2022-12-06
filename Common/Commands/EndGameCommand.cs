@@ -12,10 +12,10 @@ public sealed class EndGameCommand : AdminCommand
     public override string Description => "Attempts to end a game";
 
     protected override void SafeAction(CommandCaller caller, string input, string[] args) {
-        if (!EmpranionSystem.IsGameActive) {
+        if (!EmpranionGameSystem.IsGameActive) {
             return;
         }
 
-        EmpranionSystem.EndGame();
+        EmpranionGameSystem.EndGame();
     }
 }
