@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Terraria;
 
 namespace EmpranionEvents.Utilities;
 
-public static class NetworkUtils
+public static class NetworkingUtils
 {
     public static IEnumerable<Player> GetPlayers(Predicate<Player> predicate = null) {
         for (int i = 0; i < Main.maxPlayers; i++) {
@@ -15,13 +14,5 @@ public static class NetworkUtils
                 yield return player;
             }
         }
-    }
-
-    public static IEnumerable<Player> GetPlayersAlive() {
-        return GetPlayers(x => !x.dead && !x.ghost);
-    }
-
-    public static IEnumerable<Player> GetDeadPlayers() {
-        return GetPlayers(x => x.dead || x.ghost);
     }
 }
