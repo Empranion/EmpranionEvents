@@ -6,6 +6,10 @@ namespace EmpranionEvents;
 
 public sealed class EmpranionEvents : Mod
 {
+    // Lets keep those constant for testing purposes, for now. Soon to be configurable.
+    public const int GraceDuration = 30000;
+    public const int QueenBeeDespawnRange = 64 * 16;
+    
     public static readonly ImmutableArray<ulong> AdminIds = ImmutableArray.Create(
         76561198804876877UL,
         76561198845331461UL,
