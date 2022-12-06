@@ -1,11 +1,10 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EmpranionEvents.Common;
+namespace EmpranionEvents.Common.Systems;
 
-public sealed class EmpranionSystem : ModSystem
+public sealed class EmpranionGameSystem : ModSystem
 {
     public static bool IsGameActive { get; private set; }
 
@@ -13,7 +12,7 @@ public sealed class EmpranionSystem : ModSystem
         if (!IsGameActive) {
             return;
         }
-        
+
         DisableEvents();
     }
 
@@ -33,7 +32,7 @@ public sealed class EmpranionSystem : ModSystem
         Main.raining = false;
         Main.eclipse = false;
         Main.bloodMoon = false;
-        
+
         Main.invasionType = InvasionID.None;
     }
 }

@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EmpranionEvents.Common;
+namespace EmpranionEvents.Common.Globals;
 
 public sealed class EmpranionGlobalNPC : GlobalNPC
 {
@@ -11,11 +11,13 @@ public sealed class EmpranionGlobalNPC : GlobalNPC
             case NPCID.QueenBee:
                 if (npc.DistanceSQ(Main.player[npc.target].Center) > EmpranionEvents.QueenBeeDespawnRange) {
                     npc.active = false;
+
                     return false;
                 }
+
                 break;
         }
-        
+
         return true;
     }
 }

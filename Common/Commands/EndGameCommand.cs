@@ -1,4 +1,5 @@
-﻿using Terraria.ModLoader;
+﻿using EmpranionEvents.Common.Systems;
+using Terraria.ModLoader;
 
 namespace EmpranionEvents.Common.Commands;
 

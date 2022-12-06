@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using Steamworks;
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
 
 namespace EmpranionEvents.Common.Commands;
 
