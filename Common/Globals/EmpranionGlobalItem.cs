@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EmpranionBR.Common.Globals;
+namespace EmpranionEvents.Common.Globals;
 
 public sealed class EmpranionGlobalItem : GlobalItem
 {
