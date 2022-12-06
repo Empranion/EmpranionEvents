@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using EmpranionEvents.Common.ID;
 using Steamworks;
 using Terraria.ModLoader;
 
@@ -10,7 +9,7 @@ public abstract class AdminCommand : ModCommand
     public override sealed CommandType Type => CommandType.Chat;
 
     public override sealed void Action(CommandCaller caller, string input, string[] args) {
-        if (!UserId.AdminIds.Contains(UserId.CurrentId)) {
+        if (!EmpranionEvents.AdminIds.Contains(EmpranionEvents.CurrentId)) {
             return;
         }
 
