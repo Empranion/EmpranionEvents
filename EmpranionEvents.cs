@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace EmpranionEvents;
 
-public sealed partial class EmpranionEvents : Mod
+public sealed class EmpranionEvents : Mod
 {
     // TODO: Make all properties configurable within the host machine.
     public const int QueenBeeDespawnRange = 64 * 16;
