@@ -13,7 +13,7 @@ public sealed class EmpranionGameSystem : ModSystem
             return;
         }
 
-        DisableEvents();
+        DisableGameEvents();
     }
 
     public static void StartGame() {
@@ -24,7 +24,7 @@ public sealed class EmpranionGameSystem : ModSystem
         IsGameActive = false;
     }
 
-    private static void DisableEvents() {
+    private static void DisableGameEvents() {
         Main.StopRain();
         Main.stopMoonEvent();
         Main.StopSlimeRain();
