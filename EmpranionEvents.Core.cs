@@ -6,7 +6,7 @@ namespace EmpranionEvents;
 
 public sealed partial class EmpranionEvents : Mod
 {
-    // Lets keep those constant for testing purposes, for now. Soon to be configurable.
+    // TODO: Make all properties configurable within the host machine.
     public const int QueenBeeDespawnRange = 64 * 16;
     public const int GraceDuration = 30000;
     public const int LobbyWidth = 100;
