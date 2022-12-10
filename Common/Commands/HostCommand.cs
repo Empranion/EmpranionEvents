@@ -2,7 +2,7 @@
 
 namespace EmpranionEvents.Common.Commands;
 
-public abstract class AdminCommand : ModCommand
+public abstract class HostCommand : ModCommand
 {
     public override sealed CommandType Type => CommandType.Chat;
 
