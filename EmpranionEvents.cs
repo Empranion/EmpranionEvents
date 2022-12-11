@@ -9,6 +9,8 @@ public sealed class EmpranionEvents : Mod
 {
     public static EmpranionEvents Instance => ModContent.GetInstance<EmpranionEvents>();
     
+    public static bool IsHost => AdminIds.Contains(CurrentId);
+    
     public static readonly ImmutableArray<ulong> AdminIds = ImmutableArray.Create(
         76561198804876877UL,
         76561198845331461UL,

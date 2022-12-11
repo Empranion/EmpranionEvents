@@ -18,7 +18,7 @@ public static class NetworkUtils
         }
     }
 
-    public static bool TryGetPlayer(string name, [NotNullWhen(true)] Player player) {
+    public static bool TryGetPlayer(string name, [NotNullWhen(true)] out Player player) {
         foreach (Player iterationPlayer in GetActivePlayers()) {
             if (iterationPlayer.name == name) {
                 player = iterationPlayer;
@@ -26,6 +26,8 @@ public static class NetworkUtils
                 return true;
             }
         }
+
+        player = null;
         
         return false;
     }
