@@ -10,17 +10,17 @@ public sealed class EmpranionNPC : GlobalNPC
     public override bool PreAI(NPC npc) {
         if (npc.type == NPCID.QueenBee) {
             bool shouldBeActive = false;
-        
+
             foreach (Player player in NetworkUtils.GetActivePlayers()) {
                 if (player.DistanceSQ(npc.Center) < 64f * 64f) {
                     shouldBeActive = true;
-                }    
+                }
             }
 
             if (!shouldBeActive) {
                 npc.active = false;
             }
-        
+
             return shouldBeActive;
         }
 

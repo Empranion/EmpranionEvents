@@ -220,7 +220,7 @@ public sealed class EmpranionItem : GlobalItem
 
                 break;
 
- 
+
             case ItemID.WeatherPain:
                 item.damage = 43;
 
@@ -294,245 +294,245 @@ public sealed class EmpranionItem : GlobalItem
                 item.damage = 26;
 
                 break;
-                        
+
             case ItemID.FlamingMace:
                 item.damage = 12;
 
                 break;
-            
+
             case ItemID.JungleYoyo:
                 item.damage = 24;
 
                 break;
-        
+
             case ItemID.IceSickle:
                 item.damage = 49;
 
                 break;
-            
+
             case ItemID.CobaltNaginata:
                 item.useTime = 8;
                 item.useAnimation = 8;
                 item.damage = 49;
 
                 break;
-            
+
             case ItemID.MythrilHalberd:
                 item.damage = 65;
                 item.useTime = 18;
                 item.useAnimation = 18;
 
                 break;
-            
+
             case ItemID.AdamantiteGlaive:
                 item.damage = 80;
                 item.useTime = 16;
                 item.useAnimation = 16;
 
                 break;
-            
+
             case ItemID.PalladiumPike:
                 item.damage = 50;
                 item.useTime = 20;
                 item.useAnimation = 20;
 
                 break;
-            
+
             case ItemID.OrichalcumHalberd:
                 item.damage = 60;
                 item.useTime = 14;
                 item.useAnimation = 14;
 
                 break;
-            
+
             case ItemID.TitaniumTrident:
                 item.damage = 70;
                 item.useTime = 12;
                 item.useAnimation = 12;
 
                 break;
-            
+
             case ItemID.Gungnir:
                 item.damage = 91;
                 item.useTime = 8;
                 item.useAnimation = 8;
 
                 break;
-            
+
             case ItemID.DaoofPow:
                 item.shootSpeed = 34;
                 item.damage = 63;
 
                 break;
-            
+
             case ItemID.BlueMoon:
                 item.shootSpeed = 24;
 
                 break;
-            
+
             case ItemID.Sunfury:
                 item.damage = 36;
 
                 break;
-            
+
             case ItemID.FormatC:
                 item.damage = 46;
 
                 break;
-            
+
             case ItemID.ZapinatorGray:
                 item.damage = 61;
                 item.mana = 23;
 
                 break;
-            
+
             case ItemID.SkyFracture:
                 item.damage = 50;
 
                 break;
-        
+
             case ItemID.BeeGun:
                 item.damage = 19;
 
                 break;
-            
+
             case ItemID.CrystalVileShard:
                 item.damage = 36;
 
                 break;
-            
+
             case ItemID.SoulDrain:
                 item.damage = 5;
 
                 break;
-            
+
             case ItemID.BluePhaseblade:
                 item.damage = 30;
 
                 break;
-            
+
             case ItemID.GreenPhaseblade:
                 item.damage = 32;
 
                 break;
-            
+
             case ItemID.OrangePhaseblade:
                 item.damage = 34;
                 item.useTime = 16;
                 item.useAnimation = 16;
 
                 break;
-            
+
             case ItemID.RedPhaseblade:
                 item.damage = 34;
                 item.useTime = 16;
                 item.useAnimation = 16;
 
                 break;
-            
+
             case ItemID.WhitePhaseblade:
                 item.damage = 36;
                 item.useTime = 14;
                 item.useAnimation = 14;
 
                 break;
-            
+
             case ItemID.YellowPhaseblade:
                 item.damage = 28;
 
                 break;
-            
+
             case ItemID.BluePhasesaber:
                 item.damage = 50;
 
                 break;
-            
+
             case ItemID.GreenPhasesaber:
                 item.damage = 54;
 
                 break;
-            
+
             case ItemID.OrangePhasesaber:
                 item.damage = 64;
                 item.useTime = 23;
                 item.useAnimation = 23;
 
                 break;
-            
+
             case ItemID.RedPhasesaber:
                 item.damage = 58;
                 item.useTime = 14;
                 item.useAnimation = 14;
 
                 break;
-            
+
             case ItemID.WhitePhasesaber:
                 item.damage = 60;
                 item.useTime = 13;
                 item.useAnimation = 13;
 
                 break;
-            
+
             case ItemID.YellowPhasesaber:
                 item.damage = 46;
 
                 break;
-        
+
             case ItemID.Gatligator:
                 item.useTime = 4;
                 item.useAnimation = 4;
 
                 break;
-            
+
             case ItemID.TacticalShotgun:
                 item.damage = 67;
 
                 break;
-            
+
             case ItemID.Flamethrower:
                 item.damage = 49;
 
                 break;
-            
+
             case ItemID.SuperStarCannon:
                 item.damage = 96;
 
                 break;
-            
+
             case ItemID.FlowerPow:
                 item.damage = 100;
 
                 break;
-            
+
             case ItemID.DarkLance:
                 item.damage = 38;
                 item.useTime = 15;
 
                 break;
-            
+
             case ItemID.BladeofGrass:
                 item.damage = 27;
 
                 break;
-            
+
             case ItemID.Flamelash:
                 item.damage = 30;
                 item.mana = 32;
 
                 break;
-            
+
             case ItemID.Gladius:
                 item.damage = 22;
                 item.useTime = 6;
                 item.useAnimation = 18;
 
                 break;
-            
+
             case ItemID.HellfireArrow:
                 item.damage = 12;
 
                 break;
-            
+
             case ItemID.LightsBane:
                 item.damage = 20;
                 item.scale *= 1.1f;
@@ -683,23 +683,23 @@ public sealed class EmpranionItem : GlobalItem
                 item.scale *= 1.2f;
 
                 break;
-            
+
             case ItemID.Toxikarp:
                 item.damage = 51;
 
                 break;
-            
+
             case ItemID.EnchantedSword:
                 item.shootSpeed = 19.5f;
 
                 break;
-            
+
             case ItemID.FruitcakeChakram:
                 item.damage = 21;
                 item.shootSpeed = 13;
 
                 break;
-            
+
             case ItemID.BookofSkulls:
                 item.damage = 46;
                 item.mana = 40;
@@ -731,18 +731,18 @@ public sealed class EmpranionItem : GlobalItem
                 item.damage = 17;
 
                 break;
-            
+
             case ItemID.MagicDagger:
                 item.damage = 49;
 
                 break;
-            
+
             case ItemID.MeteorStaff:
                 item.damage = 62;
                 item.mana = 7;
 
                 break;
-            
+
             case ItemID.ShadowFlameHexDoll:
                 item.damage = 73;
                 item.mana = 4;

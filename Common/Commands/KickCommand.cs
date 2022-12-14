@@ -12,7 +12,7 @@ public sealed class KickCommand : ModCommand
     public override string Command => "kick";
 
     public override string Usage => "/kick <name>";
-    
+
     public override string Description => "Kicks a player from the server";
 
     public override void Action(CommandCaller caller, string input, string[] args) {
@@ -23,10 +23,14 @@ public sealed class KickCommand : ModCommand
                 return;
             }
 
-            string name = args[0];
+            string name = string.Join(" ", args);
 
             if (!string.IsNullOrEmpty(name) && NetworkUtils.TryGetPlayer(name, out Player player)) {
-                NetworkUtils.KickPlayer(player);
+                ModPacket packet = Mod.GetPacket();
+                packet.Write(EmpranionEvents.KickPlayerMessageType);
+                packet.Write(player.whoAmI);
+                packet.Send();
+
                 caller.Reply($"Kicked {name} from the server.", EmpranionEvents.SuccessColor);
             }
             else {

@@ -12,7 +12,7 @@ public sealed class BanCommand : ModCommand
     public override string Command => "ban";
 
     public override string Usage => "/ban <name>";
-    
+
     public override string Description => "Bans a player from the server";
 
     public override void Action(CommandCaller caller, string input, string[] args) {
@@ -23,10 +23,14 @@ public sealed class BanCommand : ModCommand
                 return;
             }
 
-            string name = args[0];
+            string name = string.Join(" ", args);
 
             if (!string.IsNullOrEmpty(name) && NetworkUtils.TryGetPlayer(name, out Player player)) {
-                NetworkUtils.BanPlayer(player);
+                ModPacket packet = Mod.GetPacket();
+                packet.Write(EmpranionEvents.BanPlayerMessageType);
+                packet.Write(player.whoAmI);
+                packet.Send();
+
                 caller.Reply($"Banned {name} from the server.", EmpranionEvents.SuccessColor);
             }
             else {
