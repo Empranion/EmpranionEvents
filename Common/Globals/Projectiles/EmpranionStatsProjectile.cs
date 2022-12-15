@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EmpranionEvents.Common.Globals;
+namespace EmpranionEvents.Common.Globals.Projectiles;
 
-public sealed class EmpranionProjectile : GlobalProjectile
+public sealed class EmpranionStatsProjectile : GlobalProjectile
 {
     public override void SetDefaults(Projectile projectile) {
         switch (projectile.type) {

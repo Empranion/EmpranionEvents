@@ -1,10 +1,11 @@
-﻿using Terraria;
+﻿using EmpranionEvents.Utilities;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EmpranionEvents.Common.Systems;
 
-public sealed class EmpranionSystem : ModSystem
+public sealed class EmpranionRecipeSystem : ModSystem
 {
     public override void AddRecipes() {
         Recipe recipe = Recipe.Create(ItemID.SwiftnessPotion);

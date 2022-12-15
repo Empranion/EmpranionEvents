@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 
-namespace EmpranionEvents.Utilities; 
+namespace EmpranionEvents.Utilities;
 
 public static class NetworkUtils
 {
@@ -28,10 +28,10 @@ public static class NetworkUtils
         }
 
         player = null;
-        
+
         return false;
     }
-    
+
     public static void KickPlayer(Player player) {
         if (player.active) {
             NetMessage.SendData(MessageID.Kick, player.whoAmI, -1, NetworkText.FromKey("CLI.KickMessage"));

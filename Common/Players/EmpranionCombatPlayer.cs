@@ -1,9 +1,9 @@
 ﻿using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace EmpranionEvents.Common.Globals;
+namespace EmpranionEvents.Common.Players;
 
-public sealed class EmpranionPlayer : ModPlayer
+public sealed class EmpranionCombatPlayer : ModPlayer
 {
     public override bool PreHurt(bool pvp,
         bool quiet,

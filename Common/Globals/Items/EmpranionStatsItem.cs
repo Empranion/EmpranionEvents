@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EmpranionEvents.Common.Globals;
+namespace EmpranionEvents.Common.Globals.Items;
 
-public sealed class EmpranionItem : GlobalItem
+public sealed class EmpranionStatsItem : GlobalItem
 {
     public override void SetDefaults(Item item) {
         switch (item.type) {

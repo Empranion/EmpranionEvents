@@ -1,8 +1,5 @@
-﻿using System.Collections.Immutable;
-using System.IO;
+﻿using System.IO;
 using EmpranionEvents.Utilities;
-using Microsoft.Xna.Framework;
-using Steamworks;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -19,10 +16,12 @@ public sealed partial class EmpranionEvents : Mod
         switch (messageType) {
             case KickPlayerMessageType:
                 NetworkUtils.KickPlayer(Main.player[reader.ReadInt32()]);
+
                 break;
-            
+
             case BanPlayerMessageType:
                 NetworkUtils.BanPlayer(Main.player[reader.ReadInt32()]);
+
                 break;
         }
     }
