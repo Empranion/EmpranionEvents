@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Terraria;
-using Terraria.ID;
-using Terraria.Localization;
 
 namespace EmpranionEvents.Utilities;
 
@@ -30,18 +28,5 @@ public static class NetworkUtils
         player = null;
 
         return false;
-    }
-
-    public static void KickPlayer(Player player) {
-        if (player.active) {
-            NetMessage.SendData(MessageID.Kick, player.whoAmI, -1, NetworkText.FromKey("CLI.KickMessage"));
-        }
-    }
-
-    public static void BanPlayer(Player player) {
-        if (player.active) {
-            Netplay.AddBan(player.whoAmI);
-            NetMessage.SendData(MessageID.Kick, player.whoAmI, -1, NetworkText.FromKey("CLI.BanMessage"));
-        }
     }
 }

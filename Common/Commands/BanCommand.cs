@@ -1,6 +1,6 @@
-﻿using System;
-using EmpranionEvents.Utilities;
+﻿using EmpranionEvents.Utilities;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace EmpranionEvents.Common.Commands;
@@ -25,19 +25,20 @@ public sealed class BanCommand : ModCommand
 
             string name = string.Join(" ", args);
 
-            if (!string.IsNullOrEmpty(name) && NetworkUtils.TryGetPlayer(name, out Player player)) {
+            if (!string.IsNullOrEmpty(name) && NetworkUtils.TryGetPlayer(name, out Player player) && Main.netMode != NetmodeID.SinglePlayer) {
                 ModPacket packet = Mod.GetPacket();
                 packet.Write(EmpranionEvents.BanPlayerMessageType);
                 packet.Write(player.whoAmI);
                 packet.Send();
 
                 caller.Reply($"Banned {name} from the server.", EmpranionEvents.SuccessColor);
+
+                return;
             }
-            else {
-                caller.Reply($"Couldn't find any player of name {name} in the server.", EmpranionEvents.ErrorColor);
-            }
+            
+            caller.Reply($"Couldn't find any player of name {name} in the server.", EmpranionEvents.ErrorColor);
         }
-        catch (Exception exception) {
+        catch (UsageException exception) {
             caller.Reply(exception.Message, EmpranionEvents.ErrorColor);
         }
     }
