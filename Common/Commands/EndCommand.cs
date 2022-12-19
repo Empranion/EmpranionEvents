@@ -31,16 +31,8 @@ public sealed class EndCommand : ModCommand
             
             caller.Reply("Successfully ended the current game!", EmpranionEvents.SuccessColor);
             
-            if (Main.netMode == NetmodeID.SinglePlayer) {
-                EmpranionGameSystem.IsGameActive = true;
-
-                return;
-            }
-            
-            ModPacket packet = Mod.GetPacket();
-            packet.Write(EmpranionEvents.ToggleGameMessageType);
-            packet.Write(false);
-            packet.Send();
+            EmpranionGameSystem.IsGameActive = false;
+            NetMessage.SendData(MessageID.WorldData);
         }
         catch (UsageException exception) {
             caller.Reply(exception.Message, EmpranionEvents.ErrorColor);

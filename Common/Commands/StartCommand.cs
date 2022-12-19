@@ -31,16 +31,8 @@ public sealed class StartCommand : ModCommand
             
             caller.Reply("Successfully started a new game!", EmpranionEvents.SuccessColor);
 
-            if (Main.netMode == NetmodeID.SinglePlayer) {
-                EmpranionGameSystem.IsGameActive = true;
-
-                return;
-            }
-            
-            ModPacket packet = Mod.GetPacket();
-            packet.Write(EmpranionEvents.ToggleGameMessageType);
-            packet.Write(true);
-            packet.Send();
+            EmpranionGameSystem.IsGameActive = true;
+            NetMessage.SendData(MessageID.WorldData);
         }
         catch (UsageException exception) {
             caller.Reply(exception.Message, EmpranionEvents.ErrorColor);
