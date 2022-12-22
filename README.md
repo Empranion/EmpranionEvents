@@ -4,5 +4,5 @@
 
 <h2>About 📖</h2>
 
-A mod made for <a href="https://www.youtube.com/c/Empranion">Empranion</a>'s custom events at his own <a href="https://discord.gg/Wg4JWHpgCf">Discord Server</a>. Simulates a THC match inside of
+A mod made for <a href="https://www.youtube.com/c/Empranion">Empranion</a>'s custom events at his own Discord Server</a>. Simulates a THC match inside of
 Terraria!
